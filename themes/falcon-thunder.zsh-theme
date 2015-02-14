@@ -155,12 +155,12 @@ prompt_status() {
 prompt_rvm() {
   local ruby_ver
   ruby_ver=`rvm list | grep -o "\=\*\ ruby-.*" | awk '{ print $2 }'`
-  prompt_segment green white "ruby: $ruby_ver"
+  prompt_segment green white "$ruby_ver"
 }
 
 prompt_date_time() {
   local date_time 
-  date_time="[%w - %T]"
+  date_time="[%w %T]"
   prompt_segment red white "$date_time"
 }
 
