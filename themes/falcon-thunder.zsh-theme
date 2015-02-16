@@ -155,7 +155,7 @@ prompt_status() {
 prompt_rvm() {
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
     local ruby_ver
-    ruby_ver=`rvm list | grep -o "\=\*\ ruby-.*" | awk '{ print $2 }'`
+    ruby_ver=`$(which ruby) --version | awk '{ print $1"-"$2 }'`
     prompt_segment green white "$ruby_ver"
   fi
 }
@@ -167,7 +167,7 @@ prompt_date_time() {
 }
 
 prompt_newline() {
-  prompt_segment default white "⚡  "
+  prompt_segment default white "⚡⚡⚡  "
 }
 
 ## Main prompt
