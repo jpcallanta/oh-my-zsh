@@ -162,7 +162,7 @@ prompt_rvm() {
 
 prompt_date_time() {
   local date_time 
-  date_time="[%w %T]"
+  date_time="%w %T"
   prompt_segment red white "$date_time"
 }
 
