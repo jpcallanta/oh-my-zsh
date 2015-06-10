@@ -167,7 +167,7 @@ prompt_date_time() {
 }
 
 prompt_newline() {
-  prompt_segment default white "⚡ "
+  prompt_segment default white "⚡  "
 }
 
 ## Main prompt
